@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\client",
+    "\\client\\Images",
     "\\client\\src",
+    "\\client\\styles",
     "\\server"
   ],
-  "SelectedNode": "\\client\\index.html",
+  "SelectedNode": "\\client",
   "PreviewInSolutionExplorer": false
 }
