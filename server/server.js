@@ -3,6 +3,7 @@ console.log('Server will be here');
 const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
+const randomColour = require('randomcolor');
 
 const app = express();
 
@@ -19,7 +20,11 @@ io.on('connection', (sock) => {
   console.log('someone connected');
   sock.emit('message', 'Hi,Im the server and you are Connected');
 
+  const colour = randomColour(); // new colour on connection.
+
   sock.on('message', (text) => io.emit('message', text));//io.emit sends it too all but sock.emit only to 1 client
+  sock.on('turn', ({ x, y }) => io.emit('turn', { x, y, colour }));
+
 });
 
 server.on('error', (err) => {
