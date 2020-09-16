@@ -4,7 +4,8 @@
     <title> Games We Made! </title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href ="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-    <link rel="stylesheet" href="styles/games.css">
+    <link rel="stylesheet" href="styles/colourblocks.css">
+    <div class="bg"></div>
   </head>
   <body>
     <header>
@@ -14,6 +15,7 @@
         <div class="bar half end"></div>
       </div>
     </header>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="main.js"></script>
@@ -46,13 +48,26 @@
                     <a href="#" class="nav-link">Events</a>
                 </li>
             </ul>
+          </nav>
 
-        </nav>
+            <!-- Chat Box -->
+
+            <div class="controls-wrapper">
+              <ul id="events"></ul>
+              <div class="controls">
+                <div class="chat-wrapper">
+                  <form id="chat-form">
+                    <input id="chat" autocomplete="off" title="chat"/>
+                    <button id="say">say</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <script src="/socket.io/socket.io.js"></script>
+            <script src="src/rpsclient.js"></script>
+
     </div>
-
-      <ul>
-          <li><a href="colourblocks.html" class="colour-blocks">Colour Blocks</a></li>
-      </ul>
 
   </body>
 
