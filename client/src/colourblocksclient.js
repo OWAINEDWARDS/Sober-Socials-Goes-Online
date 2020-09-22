@@ -4,7 +4,7 @@ const log = (text) => {
   el.innerHTML = text;
 
   parent.appendChild(el);
-  parent.scrollTop = parent.scrollHeight; // need css for height?
+
 };
 
 const onChatSubmitted = (sock) => (e) => {

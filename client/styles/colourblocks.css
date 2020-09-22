@@ -2,13 +2,29 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	text-align: center;
 }
 
 html{
-	font-size 10px;
+	font-size: 10px;
 	font-family: 'Roboto', sans-serif;
-	color: #eee;
+
 }
+
+#events li{
+	color: #70339D;
+	font-size: 25px;
+	font-family: 'Roboto', sans-serif;
+	list-style-type: none;
+}
+
+#events{
+	overflow: hidden;
+	overflow-y: scroll;
+	overflow-y: auto;
+}
+
+
 
 body{
 	width: 100%;
@@ -16,7 +32,6 @@ body{
 	background-color: #70339D;
   background-size: cover;
   background-image: url("../images/backgrounds/background.png");
-
 
 }
 
@@ -131,11 +146,71 @@ li{
 Top nav CSS ^^^ (Above)
 */
 
-.board{
-	/* position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin:auto; */
+#board{
+	display: inline-block;
+  margin: 20px auto;
+
+}
+
+#chat-form{
+	display: inline-block;
+}
+
+button {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 3px 15px;
+  color: white;
+  line-height: 25px;
+  background-color: #70339D;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 6px, rgba(0, 0, 0, 0.12) 0 1px 4px;
+  transition: all 150ms ease-in;
+  outline: none;
+}
+
+button:hover {
+  background-color: #70439D;
+}
+
+input {
+  outline: none;
+  font-size: 1.0rem;
+  padding: 0 5px;
+}
+
+.controls-wrapper {
+  background-color: rgb(255, 255, 255);
+  width: 440px;
+  margin: 20px auto;
+  border: 4px solid Black;
+}
+
+.chat-wrapper {
+  padding: 10px;
+}
+
+.chat-wrapper form {
+  display: flex;
+}
+
+.chat-wrapper form input {
+  font-size: 1.2rem;
+	color: #70339D;
+  margin: 0 10px 0 0;
+  padding: 0 5px;
+  flex-grow: 1;
+	height: 25px;
+
+}
+
+.chat-wrapper form button {
+  width: 100px;
+}
+
+#events {
+  height: 150px;
+
 }

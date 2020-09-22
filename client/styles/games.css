@@ -2,10 +2,11 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	text-align: center;
 }
 
 html{
-	font-size 10px;
+	font-size: 10px;
 	font-family: 'Roboto', sans-serif;
 	color: #eee;
 }
@@ -70,6 +71,14 @@ Top nav CSS VVV (Below)
 li{
 	margin: 0 2rem;
 }
+
+.game-list li{
+	margin: 0 2rem;
+	margin-top: 50px;
+	font-size: 50px;
+	font-family: 'Roboto', sans-serif;
+}
+
 
 .nav-link{
 	font-family: 'Roboto', sans-serif;
@@ -146,3 +155,16 @@ li{
 /*
 Top nav CSS ^^^ (Above)
 */
+
+#username-input{
+	width: 50%;
+	display: inline-block;
+	padding: 12px 20px;
+ 	margin: 8px 0;
+ 	box-sizing: border-box;
+ 	border: none;
+ 	background-color: #ffffff;
+ 	color: Purple;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+}
