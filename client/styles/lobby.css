@@ -42,6 +42,10 @@ header{
 
 }
 
+h1{
+  margin-top: 20px;
+}
+
 
 /*
 Top nav CSS VVV (Below)
@@ -72,11 +76,12 @@ li{
 	margin: 0 2rem;
 }
 
-.game-list li{
+.lobby li{
 	margin: 0 2rem;
-	margin-top: 50px;
-	font-size: 50px;
+	margin-top: 20px;
+	font-size: 20px;
 	font-family: 'Roboto', sans-serif;
+  list-style-type: none;
 }
 
 
@@ -155,3 +160,58 @@ li{
 /*
 Top nav CSS ^^^ (Above)
 */
+
+
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: #70339D;
+  text-align: center;
+	font-size: 40px;
+	font-family: 'Roboto', sans-serif;
+
+
+}
+.start-game {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: #70339D;
+  text-align: center;
+	font-size: 40px;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+#username-input{
+	width: 50%;
+	display: inline-block;
+	padding: 12px 20px;
+ 	margin: 8px 0;
+ 	box-sizing: border-box;
+ 	border: none;
+ 	background-color: #ffffff;
+ 	color: Purple;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: #70339D;
+  text-align: center;
+	font-size: 40px;
+	font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+
+}

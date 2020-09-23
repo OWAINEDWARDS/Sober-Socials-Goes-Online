@@ -6,6 +6,7 @@ const socketio = require('socket.io');
 const randomColour = require('randomcolor');
 const createBoard = require('./create-board');
 const createCooldown = require('./createCooldown');
+const createColourLobby = require('./createColourLobby');
 
 const app = express();
 
@@ -17,11 +18,17 @@ app.get('/games', function(req, res){
 res.sendFile('games.html', {root: '../client'});
 });
 
+// app.get('/colourblocks', function(req, res){
+// res.sendFile('colourblocks.html', {root: '../client'});
+// });
+
 app.get('/colourblocks', function(req, res){
-res.sendFile('colourblocks.html', {root: '../client'});
+res.sendFile('cblobby.html', {root: '../client'});
 });
 
 
+
+var usrName;
 
 const clientPath = `${__dirname}/../client`;
 console.log(`Serving static from ${clientPath}`)
@@ -30,14 +37,24 @@ const server = http.createServer(app);
 const io = socketio(server);
 // making board to keep game state
 const { clear, getBoard, makeTurn } = createBoard(20);
+const { makeArray, getLobby, addPlayer, isEnoughPlayers} = createColourLobby();
 
 io.on('connection', (sock) => {
+
   console.log('someone connected');
   sock.emit('board', getBoard());
 
+  var userName; // name for socket.
+  sock.on('usr', (text) => {
+    userName = text;
+    io.emit('lobby', addPlayer(text));
+    console.log('yo'+ userName + getLobby()[0]);
+  });
+
   const colour = randomColour(); // new colour on connection.
   const cooldownFinished = createCooldown(2000); // 2 seconds
-  sock.on('message', (text) => io.emit('message', text));//io.emit sends it too all but sock.emit only to 1 client
+
+  sock.on('message', (text) => io.emit('message', userName+ ": " + text));//io.emit sends it too all but sock.emit only to 1 client
   sock.on('turn', ({ x, y }) => {
     if(cooldownFinished()){
 

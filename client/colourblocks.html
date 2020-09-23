@@ -15,6 +15,12 @@
       });
     </script>
 
+    <script>
+      $(function(){
+        $('#footer').load('footer.html');
+      });
+    </script>
+
   </head>
   <body>
     <header>
@@ -39,9 +45,12 @@
       </div>
 
       <script src="/socket.io/socket.io.js"></script>
-      <script src="src/colourblocksclient.js"></script>
+      <script src="src/client.js"></script>
 
     </div>
+
+    <div id='footer'></div>
+    <!-- <script src="src/games.js"></script> -->
 
   </body>
 

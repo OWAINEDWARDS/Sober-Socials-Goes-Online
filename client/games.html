@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title> Games We Made! </title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"> -->
     <link rel="stylesheet" href ="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="styles/games.css">
 
@@ -14,29 +14,34 @@
       });
     </script>
 
+    <script>
+      $(function(){
+        $('#footer').load('footer.html');
+      });
+    </script>
+
   </head>
   <body>
     <header>
 
-      <form id="name-form">
-        <input id="username-input" autocomplete="off" title="user"/>
-        <!-- <button id="submit">submit</button> -->
-      </form>
-
       <div id="header"></div>
 
     </header>
-  
+
 
     <div class="game-list">
       <ul>
           <li><a href="#" class="werewolf">Werewolves  of Sober Socials</a></li>
       </ul>
       <ul>
-          <li><a href="/colourblocks" class="colour-blocks">Colour Blocks</a></li>
+          <li><a href="/colourblocks" class="colour-blocks" id="colour-blocks">Colour Blocks</a></li>
       </ul>
     </div>
 
+    <div id='footer'></div>
+
+    <!-- <script src="/socket.io/socket.io.js"></script>
+    <script src="src/client.js"></script> -->
 
   </body>
 
